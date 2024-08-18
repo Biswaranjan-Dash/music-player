@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCohOhBpn4_za0M4X2DDsSrcrx3xYbGm8I",
+          authDomain: "yours-tansein.firebaseapp.com",
+          projectId: "yours-tansein",
+          storageBucket: "yours-tansein.appspot.com",
+          messagingSenderId: "820083472428",
+          appId: "1:820083472428:web:6f00f78970c7eec1437989",
+          measurementId: "G-GBTSJW4VSS"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left bg-black">
+            <div>
+                <img src="img/close.svg" class="close invert" alt="Close-Svg">
+            </div>
+
+            <div class="home bg-grey rounded m-1 p-1">
+                <div><img class="invert" src="img/logo.svg" alt="Logo" width="150px"></div>
+                <ul>
+                    <li><img class="invert" src="img/home.svg" alt="Home-Icon">Home</li>
+                    <li><img class="invert" src="img/search.svg" alt="Search-Icon">Search</li>
+                </ul>
+
+
+            </div>
+
+
+            <div class="library bg-grey rounded m-1 p-1">
+                <div class="heading flex items-center">
+                    <img class="invert" src="img/playlist.svg" alt="playlist-img">
+                    <h2>Your library</h2>
+                </div>
+                <div class="songList">
+                    <ul>
+                        <!-- <li>
+                            <img class="invert" width="28px" src="music.svg" alt="">
+                            <div class="info">
+                                <div class="songName">Song Name</div>
+                                <div class="songArtist">Song Artist</div>
+                            </div>
+                            <div class="playNow">
+                                <span>Play Now</span>
+                                <img class="invert" src="playBtn.svg" alt="playButton" width="34px">
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="footer flex">
+                        
+                            <div><a href="https://www.spotify.com/in-en/legal/" id="" data-encore-id="textLink"><span data-encore-id="type">Legal</span></a></div>
+                            <div><a href="https://www.spotify.com/in-en/safetyandprivacy/" id="" data-encore-id="textLink"><span data-encore-id="type">Safety &amp; Privacy Center</span></a></div>
+                            <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/" id="" data-encore-id="textLink"><span data-encore-id="type">Privacy Policy</span></a></div>
+                            <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/" id="" data-encore-id="textLink"><span data-encore-id="type">Cookies</span></a></div>
+                            <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3" id="" data-encore-id="textLink"><span data-encore-id="type">About Ads</span></a></div>
+                            <div><a href="https://www.spotify.com/in-en/accessibility/" id="" data-encore-id="textLink"><span data-encore-id="type">Accessibility</span></a></div>
+                        
+                </div>
+            </div>
+        </div>
+
+
+        <div class="right bg-grey rounded">
+            <div class="header flex p-1">
+                <div class="hamburgerContainer">
+                    <img src="img/hamburger.svg" class="hamburger invert">
+                    <div class="nav">
+                        <img class="" src="img/left-nav.svg" alt="left-nav">
+                        <img class="" src="img/right-nav.svg" alt="right-nav">
+                    </div>
+                </div>
+                <div class="buttons flex">
+                    <button class="signUpBtn">Sign up</button>
+                    <button class="logInBtn">Log in</button>
+                </div>
+            </div>
+            <div class="spotifyPlaylists">
+                <h2>Pookie Playlist</h2>
+                <div class="cardContainer">
+                    <!-- <div class="card" data-folder="ncs">
+                        <div class="playBtn">
+                            <img src="play.svg" alt="playBtn" class="playSvg">
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="playlist-img">
+                        <h3>love hotel</h3>
+                        <p>leftovermax</p>
+                    </div>             
+
+                    <div class="card" data-folder="cs">
+                        <div class="playBtn">
+                            <img src="play.svg" alt="playBtn" class="playSvg">
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="playlist-img">
+                        <h3>love hotel</h3>
+                        <p>leftovermax</p>
+                    </div>
+                     -->
+                    
+                </div>
+            </div>
+            <div class="playbar">
+                <div class="aboveBar">
+
+                    <div class="songInfo">
+                        
+                    </div>
+                    <div class="songButtons">
+                        <img id="previous" src="img/previous.svg" alt="Previous-song">
+                        <img id="play" src="img/playBtn.svg" alt="Play-song">
+                        <img id="next" src="img/next.svg" alt="Next-song">
+                    </div>
+                    <div class="timeVol">
+
+                        <div class="songTime">
+                            <span class="currentTime">00:00</span> <span class="totalDuration"></span>
+                        </div>
+                        <div class="volume">
+                            <img src="img/volume.svg" class="volumeImg invert" alt="volume">
+                            <div class="range invert">
+                                <input id="volumeBar" type="range" name="volume">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="seekbar">
+
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Firebase SDKs -->
+
+    <script type="module"   src="js/script.js"></script>
+</body>
+
+</html>  

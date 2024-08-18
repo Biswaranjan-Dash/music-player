@@ -1,0 +1,21 @@
+[debug] [2024-08-17T23:55:04.705Z] ----------------------------------------------------------------------
+[debug] [2024-08-17T23:55:04.709Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\biswa\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-08-17T23:55:04.710Z] CLI Version:   13.15.2
+[debug] [2024-08-17T23:55:04.710Z] Platform:      win32
+[debug] [2024-08-17T23:55:04.710Z] Node Version:  v22.3.0
+[debug] [2024-08-17T23:55:04.710Z] Time:          Sun Aug 18 2024 05:25:04 GMT+0530 (India Standard Time)
+[debug] [2024-08-17T23:55:04.711Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-17T23:55:04.788Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-17T23:55:04.789Z] > authorizing via signed-in user (nitrbiswa@gmail.com)
+[debug] [2024-08-17T23:55:04.789Z] [iam] checking project yours-tansein for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-08-17T23:55:04.791Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/yours-tansein:testIamPermissions [none]
+[debug] [2024-08-17T23:55:04.791Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/yours-tansein:testIamPermissions x-goog-quota-user=projects/yours-tansein
+[debug] [2024-08-17T23:55:04.791Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yours-tansein:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-17T23:55:06.396Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/yours-tansein:testIamPermissions 200
+[debug] [2024-08-17T23:55:06.396Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yours-tansein:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-17T23:55:06.397Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/yours-tansein [none]
+[debug] [2024-08-17T23:55:06.405Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/yours-tansein, {"headers":{},"method":"GET","signal":{}}): FetchError: request to https://firebase.googleapis.com/v1beta1/projects/yours-tansein failed, reason: getaddrinfo EAI_AGAIN firebase.googleapis.com
+[debug] [2024-08-17T23:55:06.405Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/yours-tansein (original: request to https://firebase.googleapis.com/v1beta1/projects/yours-tansein failed, reason: getaddrinfo EAI_AGAIN firebase.googleapis.com)
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
